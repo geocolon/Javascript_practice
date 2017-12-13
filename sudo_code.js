@@ -26,13 +26,15 @@ var array = [3,-1,-1];
 function mostFrequent(arr){
   var storage = {};
   for (i = 0; i < arr.length; i++){
-    // console.log(storage[arr[i]] = 1);
-    for (var key in storage){
-       if (key === arr[i]){
-         storage = storage[key] + 1;
-       }
-     }
-    }
-     console.log(storage);
+    if (storage[array[i]] === undefined){
+      storage[array[i]] = 1;
+    } else {
+    storage[array[i]] = storage[array[i]] + 1;
+  }
+  }
+  for (var key in storage){
+  return Math.max(storage[key]);
+  }
 }
+
 mostFrequent(array);
